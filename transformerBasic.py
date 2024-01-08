@@ -1,3 +1,5 @@
+# Calculate attention
+
 import numpy as np
 import math
 
@@ -51,16 +53,18 @@ vQuery = np.matmul(encoderInput,vWeights)
 QKt_sqrt_d = (np.matmul(qQuery,kQuery.transpose()))/(math.sqrt(dk))
 
 attention = np.matmul((np.exp(QKt_sqrt_d)/sum(np.exp(QKt_sqrt_d))),vQuery)
+input()
+
+# 
+LinWeights = np.random.rand(4,dModel)
+attnOutput = np.matmul(attention,LinWeights)
 
 
 
 
-""" 
-# Attention formula
-attention(Q, K, V) = softmax((QK')/(sqrt(dk)))
-
+"""
 # head 
 head(i) = attention(QW(iQ), KW(iK), VW(iV))
 
 resolution.org.uk -> find a law professional -> advanced search
- """
+"""
