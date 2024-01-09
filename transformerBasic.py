@@ -63,8 +63,5 @@ attnOutput = np.matmul(attention,LinWeights)
 
 
 """
-# head 
-head(i) = attention(QW(iQ), KW(iK), VW(iV))
-
 resolution.org.uk -> find a law professional -> advanced search
 """
